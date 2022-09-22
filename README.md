@@ -46,7 +46,7 @@ A data table of weapon items that each player will be assigned at the start of t
 
 The distance each UI weapon slot will be spaced from each other.
 
-Creating a Weapon Item
+### Creating a Weapon Item
 
 1. Add a new networked weapon template to the Project Content.
 
