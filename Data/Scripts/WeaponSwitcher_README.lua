@@ -1,36 +1,37 @@
-<div align="center">
-
-# Weapon Switcher
-
-[![Build Status](https://github.com/Core-Team-META/CC-Template-Repository/workflows/CI/badge.svg)](https://github.com/Core-Team-META/CC-Template-Repository/actions/workflows/ci.yml?query=workflow%3ACI%29)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Core-Team-META/CC-Template-Repository?style=plastic)
-
-![Preview](/Screenshots/weaponswitcher.png)
-
-</div>
-
-
-## Finding the Component
-
-This component can be found under the **CoreAcademy** account on Community Content.
-
-## Overview
+--[[
+ __          __                             _____         _ _       _               
+ \ \        / /                            / ____|       (_) |     | |              
+  \ \  /\  / /__  __ _ _ __   ___  _ __   | (_____      ___| |_ ___| |__   ___ _ __ 
+   \ \/  \/ / _ \/ _` | '_ \ / _ \| '_ \   \___ \ \ /\ / / | __/ __| '_ \ / _ \ '__|
+    \  /\  /  __/ (_| | |_) | (_) | | | |  ____) \ V  V /| | || (__| | | |  __/ |   
+     \/  \/ \___|\__,_| .__/ \___/|_| |_| |_____/ \_/\_/ |_|\__\___|_| |_|\___|_|   
+                      | |                                                           
+                      |_|                                                           
 
 Weapon Switcher is a template that allows players to switch between multiple weapons.
 
-The template uses the inventory and item components, as well as data tables. The player will be assigned a new inventory and be given weapons at the start of the game. A UI will be created to display the current weapons the player has in their inventory. The template also includes a binding set of actions for switching weapons.
+The template uses the inventory and item components, as well as data tables. The player
+will be assigned a new inventory and be given weapons at the start of the game. A UI
+will be created to display the current weapons the player has in their inventory.
+The template also includes a binding set of actions for switching weapons.
 
 This template works with the Weapon Spawner template.
 
-## Setup
+=====
+Setup
+=====
 
 Drag and drop the Weapon Switcher template into the Hierarchy.
 
 Preview the project and use "Q", "E", "1", "2", or "3" to switch weapons.
 
-## How to use this Template
+==========
+How to Use
+==========
 
-### Custom Properties
+=================
+Custom Properties
+=================
 
 The root object of the template has 3 custom properties.
 
@@ -46,7 +47,9 @@ A data table of weapon items that each player will be assigned at the start of t
 
 The distance each UI weapon slot will be spaced from each other.
 
+======================
 Creating a Weapon Item
+======================
 
 1. Add a new networked weapon template to the Project Content.
 
@@ -60,7 +63,9 @@ Creating a Weapon Item
 
 6. Open the Starting Weapon Inventory data table and add the new item.
 
-### Change Inventory Slots
+======================
+Change Inventory Slots
+======================
 
 To change the amount of inventory slots, the Weapon Inventory template needs to be updated.
 
@@ -74,9 +79,13 @@ To change the amount of inventory slots, the Weapon Inventory template needs to 
 
 5. Delete the Weapon Inventory object from the Hierarchy.
 
-### Events
+======
+Events
+======
 
 The server script is connected to an event for the player to equip a new weapon
 and add the item to the inventory. The syntax is as follows:
 
 `Events.Broadcast("AddInventoryWeapon", weapon, item)`
+
+]]--
