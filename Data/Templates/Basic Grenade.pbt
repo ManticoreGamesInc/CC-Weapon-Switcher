@@ -522,7 +522,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 118
+  SerializationVersion: 119
   VirtualFolderPath: "Weapon Switcher"
   VirtualFolderPath: "Weapons"
   VirtualFolderPath: "Projectile"

@@ -2,7 +2,7 @@ Assets {
   Id: 1735943184043934463
   Name: "Pistol"
   PlatformAssetType: 33
-  SerializationVersion: 118
+  SerializationVersion: 119
   VirtualFolderPath: "Weapon Switcher"
   ItemAsset {
     CustomName: "Pistol"

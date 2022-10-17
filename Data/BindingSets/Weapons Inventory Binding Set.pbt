@@ -2,7 +2,7 @@ Assets {
   Id: 17504818798877675931
   Name: "Weapons Inventory Binding Set"
   PlatformAssetType: 29
-  SerializationVersion: 118
+  SerializationVersion: 119
   VirtualFolderPath: "Weapon Switcher"
   BindingSetAsset {
     Bindings {
