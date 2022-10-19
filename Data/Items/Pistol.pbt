@@ -3,6 +3,7 @@ Assets {
   Name: "Pistol"
   PlatformAssetType: 33
   SerializationVersion: 119
+  DirectlyPublished: true
   VirtualFolderPath: "Weapon Switcher"
   ItemAsset {
     CustomName: "Pistol"

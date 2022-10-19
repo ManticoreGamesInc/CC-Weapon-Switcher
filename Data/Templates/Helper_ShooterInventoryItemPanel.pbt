@@ -581,5 +581,6 @@ Assets {
     }
   }
   SerializationVersion: 119
+  DirectlyPublished: true
   VirtualFolderPath: "Weapon Switcher"
 }

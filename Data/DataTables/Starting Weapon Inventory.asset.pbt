@@ -3,6 +3,7 @@ Assets {
   Name: "Starting Weapon Inventory"
   PlatformAssetType: 31
   SerializationVersion: 119
+  DirectlyPublished: true
   VirtualFolderPath: "Weapon Switcher"
   DataTableAsset {
   }

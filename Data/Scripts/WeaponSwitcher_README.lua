@@ -17,6 +17,12 @@ The template also includes a binding set of actions for switching weapons.
 
 This template works with the Weapon Spawner template.
 
+====
+NOTE
+====
+
+If the Dependent folders are empty in Project Content under Imported Content for this component, save and reload the project to fix it.
+
 =====
 Setup
 =====
@@ -51,17 +57,25 @@ The distance each UI weapon slot will be spaced from each other.
 Creating a Weapon Item
 ======================
 
-1. Add a new networked weapon template to the Project Content.
+1. Create a new template for the weapon equipment.
 
-2. Find the Weapon Switcher items in the Project Content.
+2. In Project Content window, create a new item asset.
 
-3. Duplicate one of the items and rename to the new weapon name.
+3. Assign it a name and select the item asset to see its Properties.
 
-4. Select the new item and open the Properties window.
+4. Drag and drop the weapon equioment template into the Item Template property.
 
-5. Change the item's properties (Item Template, Slot, Icon, Ammo).
+5. Add 3 custom properties to the Item Asset.
 
-6. Open the Starting Weapon Inventory data table and add the new item.
+--- 5a. Name: "Slot", Type: Int, The slot number that this weapon will occupy when equipped.
+
+--- 5b. Name: "Icon", Type: Asset Reference, The 2d icon that will display on the UI
+
+--- 5c. Name: "Ammo", Type: Int, A reference for the amount of ammo which should equal the starting ammo amount.
+
+6. Right click the Ammo custom property, and select the Enable Dynamic Property option.
+
+7. Open the Starting Weapon Inventory data table and drag the Item Asset into one of the rows.
 
 ======================
 Change Inventory Slots
