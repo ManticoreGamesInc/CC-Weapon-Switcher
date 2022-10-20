@@ -21,36 +21,39 @@ local function SetupNewWeapon(player, inventory, slot)
         return nil
     end
 
-    local weapon = World.SpawnAsset(inventory:GetItem(slot).itemTemplateId)
+	local item = inventory:GetItem(slot)
+    local weapon = World.SpawnAsset(item.itemTemplateId)
     weapon:Equip(player)
 
-    -- Connect the weapon events to update Ammo property
-    if not weapon.isHitscan then
-    	weapon.projectileSpawnedEvent:Connect(UpdateWeaponAmmo)
-    else
-	    local shootAbility = weapon:GetAbilities()[1]
-	    if shootAbility then
-	        shootAbility.executeEvent:Connect(function(ability)
+	if item:GetCustomProperty("Ammo") then
+	    -- Connect the weapon events to update Ammo property
+	    if not weapon.isHitscan and weapon.projectileSpawnedEvent then
+	    	weapon.projectileSpawnedEvent:Connect(UpdateWeaponAmmo)
+	    else
+		    local shootAbility = weapon:GetAbilities()[1]
+		    if shootAbility then
+		        shootAbility.executeEvent:Connect(function(ability)
+		        	Task.Wait()
+		            UpdateWeaponAmmo(ability:FindAncestorByType('Weapon'))
+		        end)
+		    end    	
+	    end
+	    local reloadAbility = weapon:GetAbilities()[2]
+	    if reloadAbility then
+	        reloadAbility.executeEvent:Connect(function(ability)
 	        	Task.Wait()
 	            UpdateWeaponAmmo(ability:FindAncestorByType('Weapon'))
 	        end)
-	    end    	
-    end
-    local reloadAbility = weapon:GetAbilities()[2]
-    if reloadAbility then
-        reloadAbility.executeEvent:Connect(function(ability)
-        	Task.Wait()
-            UpdateWeaponAmmo(ability:FindAncestorByType('Weapon'))
-        end)
-    end
-
-    -- Setup ammo for current weapon
-    if inventories[player].ammo then
-        weapon.currentAmmo = inventory:GetItem(slot):GetCustomProperty("Ammo")
-    else
-        inventory:GetItem(slot):SetCustomProperty("Ammo", weapon.currentAmmo)
-        inventories[player].ammo = true
-    end
+	    end
+	
+	    -- Setup ammo for current weapon
+	    if inventories[player].ammo then
+	        weapon.currentAmmo = inventory:GetItem(slot):GetCustomProperty("Ammo")
+	    else
+	        inventory:GetItem(slot):SetCustomProperty("Ammo", weapon.currentAmmo)
+	        inventories[player].ammo = true
+	    end
+	end
     return weapon
 end
 
