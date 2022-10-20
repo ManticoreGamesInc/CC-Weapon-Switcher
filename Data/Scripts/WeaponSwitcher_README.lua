@@ -63,7 +63,7 @@ Creating a Weapon Item
 
 3. Assign it a name and select the item asset to see its Properties.
 
-4. Drag and drop the weapon equioment template into the Item Template property.
+4. Drag and drop the weapon equipment template into the Item Template property.
 
 5. Add 3 custom properties to the Item Asset.
 
@@ -71,7 +71,7 @@ Creating a Weapon Item
 
 --- 5b. Name: "Icon", Type: Asset Reference, The 2d icon that will display on the UI
 
---- 5c. Name: "Ammo", Type: Int, A reference for the amount of ammo which should equal the starting ammo amount.
+--- 5c. Name: "Ammo", Type: Int, A reference for the amount of ammo which should equal the starting ammo amount. Do not add if ammo is not required (sword for example).
 
 6. Right click the Ammo custom property, and select the Enable Dynamic Property option.
 
