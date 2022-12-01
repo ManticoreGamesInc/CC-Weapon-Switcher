@@ -2,7 +2,7 @@ Assets {
   Id: 16660876440369051409
   Name: "Grenade"
   PlatformAssetType: 33
-  SerializationVersion: 119
+  SerializationVersion: 120
   DirectlyPublished: true
   VirtualFolderPath: "Weapon Switcher"
   ItemAsset {

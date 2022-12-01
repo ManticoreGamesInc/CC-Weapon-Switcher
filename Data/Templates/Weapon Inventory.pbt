@@ -54,7 +54,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 119
+  SerializationVersion: 120
   DirectlyPublished: true
   VirtualFolderPath: "Weapon Switcher"
 }
